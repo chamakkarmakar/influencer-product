@@ -65,6 +65,9 @@ Popular Collection
     width: 1047px;
     margin-left: 150px;
 }
+.products-collection > h3{
+    text-align: center;
+}
 .products{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -136,11 +139,20 @@ footer > h2{
         width: 100%;
     }
     .top{
+        /*  */
+        display: flex;
         flex-direction: column;
        
     }
+    h3{
+        text-align: center;
+    }
+    .see-more{
+        text-align: right;
+    }
     .products{
         grid-template-columns: repeat(1, 1fr);
+        margin-left: 0;
 
     }
     
