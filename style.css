@@ -223,8 +223,11 @@ footer > h2{
     }
     .products{
         grid-template-columns: repeat(1, 1fr);
-        margin-left: 0;
+        
 
+    }
+    .products-collection{
+        margin-left: 0;
     }
     .see-more{
         float: left;
