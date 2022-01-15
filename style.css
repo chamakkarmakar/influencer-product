@@ -256,7 +256,6 @@ footer > h2{
     .products{
         grid-template-columns: repeat(2, 1fr);
         margin-left: 0;
-
     }
     .see-more{
         float: left;
@@ -264,14 +263,10 @@ footer > h2{
     footer{
         width: 100%;
     }
-    .subscribe-section{
-        width: 100%;
-    }
     .subscribe-section form {
         width: 100%;
     }
-    .subscribe-section {
-        
+    .subscribe-section {   
         margin: 0 ;
     }
 }
