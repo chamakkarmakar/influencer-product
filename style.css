@@ -3,6 +3,7 @@
 
 body{
     font-family: 'Merriweather', serif;
+    
 }
 p{
     font-size: 13px; 
@@ -20,6 +21,7 @@ a > button{
     border: 1px solid #d1d1d1;
     background-image: linear-gradient(#97caef, #cafafe);
     margin-top: 16px;
+    cursor: pointer;
 }
 
 /* -------------------------
@@ -42,12 +44,21 @@ Top
     width: 50%;
     padding-left: 10%; 
 }
-h1{
-    font-size: 52px;
-    margin-bottom: 16px;
+.half-width h1{
+    font-size: 45px;
 }
+
 .half-width img{
     background-image: url('images/Circle\ design.svg');
+    animation-name: camera;
+    animation-duration: 2s;
+    transition: 2s ease-in-out;
+    transform: scale(1);
+    
+}
+@keyframes camera{
+    from{ transform: scale(.8);}
+    to{ transform: scale(1);}
 }
 hr{
     width: 1110px;
@@ -108,11 +119,69 @@ Popular Collection
     color: #787885;
 }
 .see-more {
-    margin-left: 945px;
-    margin-top: 50px;
+    float: right;
+    margin-top: 30px;
     color: #2e1114;
     font-size: 18px;
 }
+
+/* --------------------
+subscribe 
+-----------------------*/
+.subscribe-section {
+    background: #f9f9f9;
+    padding: 20px 0;
+	margin: 70px 100px;
+	border-radius: 50px;
+	box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.08);
+}
+.subscribe-container {
+    width: 100%;
+    text-align: center;
+}
+.subscribe-section form {
+    width: 60%;
+    position: relative;
+    margin: 0 auto;
+}
+.subscribe-section form input[type="email"] {
+    width: 98%;
+    background: #ededed;
+	padding: 10px 0px 10px 10px;
+	border: none;
+}
+.subs-form-control {
+    background: transparent;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    height: 40px;
+    font-size: 18px;
+    font-weight: 300;
+    
+    color: #555555;
+    border-radius: 30px;
+}
+.subscribe-section form input[type="submit"] {
+    position: absolute;
+    right: 0;
+    top: 0px;
+    height: 60px;
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: 300;
+    width: 160px;
+}
+input[type="submit"] {
+    cursor: pointer;
+}
+.form-button {
+    border: 1px solid #d1d1d1;
+    background-image: linear-gradient(#97caef, #cafafe);
+	color: #2e1114;
+}
+
+
+
+ 
 
 /* -----------------------
 footer 
@@ -134,6 +203,9 @@ footer > h2{
 }
 
 
+
+
+/* Mobile  */
 @media only screen and (max-width: 576px){
     header, main{
         width: 100%;
@@ -142,21 +214,39 @@ footer > h2{
         /*  */
         display: flex;
         flex-direction: column;
-       
-    }
-    h3{
-        text-align: center;
-    }
-    .see-more{
-        text-align: right;
+        justify-content: center;
     }
     .products{
         grid-template-columns: repeat(1, 1fr);
         margin-left: 0;
 
     }
-    
+    .subscribe-section{
+        width: 100%;
+    }
+}
+/* Tablet */
+@media only screen and (max-width: 768px) and (min-width: 577px){
+    header, main{
+        width: 100%;
+    }
+    .top{
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .products{
+        grid-template-columns: repeat(2, 1fr);
+        margin-left: 0;
 
+    }
+    footer{
+        width: 100%;
+    }
+    .subscribe-section{
+        width: 100%;
+    }
 }
 
 
